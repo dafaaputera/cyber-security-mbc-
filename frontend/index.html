@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MBC Laboratory</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ['Figtree', 'sans-serif'] },
+            colors: {
+              primary: '#f43f5e',
+              secondary: '#3b82f6',
+              accent: '#0f172a',
+              bgDark: '#0d1117',
+              surfaceDark: '#1f2937'
+            },
+            transitionProperty: {
+              spacing: 'margin, padding',
+              colors: 'color, background-color, border-color'
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-bgDark text-white font-sans">
+    <!-- Navigation -->
+    <header class="bg-surfaceDark border-b border-gray-700 shadow-sm sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+    <img src="./mbc final.png" alt="MBC Lab Logo" class="h-10 w-auto" />
+    <nav class="hidden md:flex gap-8 text-sm font-medium ml-auto">
+      <a href="#home" class="hover:text-primary transition-colors">Home</a>
+      <a href="#services" class="hover:text-secondary transition-colors">Divisi</a>
+      <a href="#contact" class="hover:text-primary transition-colors">Kontak</a>
+      <a href="#developer" class="hover:text-secondary transition-colors">Developer</a>
+    </nav>
+  </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-20 pb-16 px-4 bg-gradient-to-br from-surfaceDark to-bgDark text-center">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl md:text-5xl font-bold text-white leading-tight">Solusi Inovatif Teknologi Masa Depan</h2>
+        <p class="mt-4 text-gray-300 text-lg">MBC Laboratory adalah pusat riset dan pengembangan dalam bidang Cybersecurity, Big Data, GIS, dan Game Technology.</p>
+        <p class="mt-1 text-secondary font-medium">Mewujudkan sistem yang aman dan cerdas untuk semua.</p>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20 px-4 bg-bgDark">
+      <div class="max-w-6xl mx-auto text-center">
+        <h3 class="text-3xl font-bold text-white mb-12">Divisi & Layanan</h3>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-surfaceDark p-6 rounded-xl shadow hover:shadow-lg transition-all duration-300">
+            <h4 class="text-xl font-semibold text-primary">Cybersecurity</h4>
+            <p class="mt-2 text-gray-300">Sistem keamanan digital untuk melindungi data dari ancaman siber.</p>
+          </div>
+          <div class="bg-surfaceDark p-6 rounded-xl shadow hover:shadow-lg transition-all duration-300">
+            <h4 class="text-xl font-semibold text-secondary">Big Data</h4>
+            <p class="mt-2 text-gray-300">Analitik data skala besar untuk strategi bisnis berbasis data.</p>
+          </div>
+          <div class="bg-surfaceDark p-6 rounded-xl shadow hover:shadow-lg transition-all duration-300">
+            <h4 class="text-xl font-semibold text-primary">Game Technology</h4>
+            <p class="mt-2 text-gray-300">Pengembangan permainan imersif dan edukatif berbasis teknologi mutakhir.</p>
+          </div>
+          <div class="bg-surfaceDark p-6 rounded-xl shadow hover:shadow-lg transition-all duration-300">
+            <h4 class="text-xl font-semibold text-secondary">GIS</h4>
+            <p class="mt-2 text-gray-300">Sistem informasi geografis untuk visualisasi dan analisis spasial.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 px-4 bg-surfaceDark">
+      <div class="max-w-3xl mx-auto text-center">
+        <h3 class="text-3xl font-bold text-white">Kontak Kami</h3>
+        <p class="mt-2 text-gray-400">Jl. Telekomunikasi No.1, Terusan Buah Batu, Bandung | Line : @sok8073r | Instagram : @mbclab</p>
+        <form id="contactForm" class="mt-8 space-y-4 text-left">
+          <input type="text" name="name" placeholder="Nama" class="w-full p-3 bg-gray-800 border border-gray-600 rounded focus:ring-2 focus:ring-primary text-white" required />
+          <input type="email" name="email" placeholder="Email" class="w-full p-3 bg-gray-800 border border-gray-600 rounded focus:ring-2 focus:ring-secondary text-white" required />
+          <textarea name="message" placeholder="Pesan" class="w-full p-3 bg-gray-800 border border-gray-600 rounded focus:ring-2 focus:ring-accent text-white" rows="5" required></textarea>
+          <button type="submit" class="w-full md:w-auto px-6 py-2 bg-primary text-white rounded font-medium hover:bg-pink-600 transition-colors">Kirim Pesan</button>
+        </form>
+        <p id="formStatus" class="mt-4 text-sm text-center"></p>
+      </div>
+    </section>
+
+    <!-- Developer -->
+    <section id="developer" class="py-20 px-4 bg-bgDark">
+      <div class="max-w-4xl mx-auto text-center">
+        <h3 class="text-3xl font-bold text-white">Developer</h3>
+        <div class="mt-6 bg-surfaceDark p-6 rounded-xl shadow text-left">
+          <p><strong>Nama:</strong> Dafa Aulia Putera</p>
+          <p><strong>Kompetensi:</strong> Cybersecurity Enthusiast</p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/dafaaputera/cyber-security-mbc-" class="text-blue-400 hover:underline">github.com/dafaaputera/cyber-security-mbc-</a></p>
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/dafaaputera" class="text-blue-400 hover:underline">linkedin.com/in/dafaaputera</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 text-center p-4 text-sm">
+      <p>&copy; 2025 MBC Laboratory. All rights reserved.</p>
+    </footer>
+
+    <!-- Script -->
+    <script>
+      const form = document.getElementById('contactForm');
+      const status = document.getElementById('formStatus');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const formData = {
+          name: form.name.value,
+          email: form.email.value,
+          message: form.message.value
+        };
+
+        try {
+          const res = await fetch('http://localhost:3001/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData)
+          });
+
+          if (res.ok) {
+            status.textContent = 'Pesan berhasil dikirim!';
+            status.className = 'text-green-500 mt-2';
+            form.reset();
+          } else {
+            status.textContent = 'Gagal mengirim pesan.';
+            status.className = 'text-red-500 mt-2';
+          }
+        } catch (err) {
+          status.textContent = 'Terjadi kesalahan jaringan.';
+          status.className = 'text-red-500 mt-2';
+        }
+      });
+    </script>
+  </body>
+</html>
