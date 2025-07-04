@@ -1,91 +1,75 @@
-# 🛡️ Cyber Security MBC – Technical Test 2025
+# 🌐 MBC Laboratory Website
 
-Ini adalah proyek technical test untuk seleksi divisi **Cyber Security** di **MBC Laboratory 2025**, terdiri dari frontend dengan Tailwind CSS dan backend dengan Node.js + Express + Nodemailer.
-
----
-
-## 🔧 Fitur Utama
-
-- ✅ Landing Page responsif & mobile-friendly
-- ✅ 4 halaman: Home, Divisi & Layanan, Kontak, Developer
-- ✅ Form kontak terhubung ke backend
-- ✅ Email dikirim otomatis ke admin MBC
-- ✅ Aksesibilitas dan desain adaptif
+Website resmi untuk MBC Laboratory — menampilkan informasi mengenai divisi Cybersecurity, Big Data, Game Technology, dan GIS. Dibangun dengan HTML + TailwindCSS untuk frontend dan Node.js (Express + Nodemailer) untuk backend.
 
 ---
 
-## 📁 Struktur Proyek
+## 📁 Struktur Direktori
 
 ```
-cyber-security-mbc-/
-├── frontend/         # Halaman HTML dengan Tailwind
-│   └── index.html
-├── backend/          # Server Express + Nodemailer
+.
+├── backend          # Backend Node.js (Express + Nodemailer)
 │   ├── index.js
-│   ├── .env          # ← Disembunyikan (ignored)
-├── README.md
-└── .gitignore
+│   ├── package.json
+│   ├── .env         # Variabel lingkungan (EMAIL_USER, EMAIL_PASS)
+│   └── .gitignore
+├── frontend         # Frontend statis (HTML + TailwindCSS)
+│   ├── index.html
+│   └── mbc final.png
+└── README.md
 ```
 
 ---
 
-## 🚀 Cara Menjalankan Lokal
+## 🚀 Deployment
 
-### Frontend:
-```bash
-cd frontend
-npx serve .
-```
-Atau buka langsung di browser dengan Live Server (VS Code)
+### 🔹 Frontend
+- **Platform**: [Vercel](https://vercel.com/)
+- **URL**: [https://cyber-security-mbc.vercel.app](https://cyber-security-mbc.vercel.app)
 
-### Backend:
-```bash
-cd backend
-npm install
-node index.js
-```
-
-Jalankan backend di port `3001` dan akses frontend di browser.
+### 🔹 Backend
+- **Platform**: [Railway](https://railway.app/)
+- **URL**: [https://cyber-security-mbc-production.up.railway.app](https://cyber-security-mbc-production.up.railway.app)
 
 ---
 
-## 📬 Environment Variables
+## 📬 Formulir Kontak
 
-Buat file `.env` di dalam folder `backend/`:
+Formulir pada halaman frontend mengirimkan data ke endpoint `/contact` di backend. Backend menggunakan `nodemailer` untuk mengirim email secara langsung ke admin MBC.
 
+```js
+POST /contact
+Content-Type: application/json
+
+{
+  "name": "Nama Pengirim",
+  "email": "email@pengirim.com",
+  "message": "Isi pesan"
+}
 ```
+
+---
+
+## 🔐 Environment Variables (.env)
+
+```env
 EMAIL_USER=youremail@gmail.com
-EMAIL_PASS=your_app_password
+EMAIL_PASS=yourapppassword
 ```
 
-> App Password bisa dibuat di [myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords)
+> ⚠️ File `.env` sudah di-ignore menggunakan `.gitignore` agar tidak ter-push ke repo publik.
 
 ---
 
-## 🌍 Deployment
+## 🧑‍💻 Developer
 
-- Frontend (Vercel): [https://your-vercel-url.vercel.app](#)
-- Backend (Render): [https://your-backend-api.onrender.com](#)
-
-> Jangan lupa update URL `fetch()` di frontend setelah backend dideploy!
-
----
-
-## 👨‍💻 Developer
-
-- **Nama:** Dafa Aulia Putera
-- **GitHub:** [github.com/dafaaputera](https://github.com/dafaaputera)
-- **Divisi Tujuan:** Cybersecurity – MBC Laboratory 2025
+- **Nama**: Dafa Aulia Putera
+- **GitHub**: [@dafaaputera](https://github.com/dafaaputera)
+- **LinkedIn**: [linkedin.com/in/dafaaputera](https://linkedin.com/in/dafaaputera)
 
 ---
 
-## 📸 (Opsional) Dokumentasi
+## 📌 Catatan
 
-- Screenshot tampilan mobile & desktop
-- Diagram alur form → backend → email
-
----
-
-## 📜 Lisensi
-
-Proyek ini dibuat untuk keperluan rekrutmen MBC Laboratory dan tidak diperuntukkan untuk distribusi komersial.
+- Pastikan Anda telah mengaktifkan **App Password** di Gmail untuk dapat mengirim email via nodemailer.
+- Formulir telah disesuaikan agar **mobile-friendly**, **dark-mode**, dan menggunakan **TailwindCSS** secara modern.
