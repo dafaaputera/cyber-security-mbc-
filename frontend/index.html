@@ -28,7 +28,7 @@
     </script>
   </head>
   <body class="bg-bgDark text-white font-sans">
-    <!-- Navigation -->
+    
     <header class="bg-surfaceDark border-b border-gray-700 shadow-sm sticky top-0 z-50">
   <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
     <img src="./mbc final.png" alt="MBC Lab Logo" class="h-10 w-auto" />
@@ -41,7 +41,6 @@
   </div>
     </header>
 
-    <!-- Hero Section -->
     <section id="home" class="pt-20 pb-16 px-4 bg-gradient-to-br from-surfaceDark to-bgDark text-center">
       <div class="max-w-4xl mx-auto">
         <h2 class="text-4xl md:text-5xl font-bold text-white leading-tight">Solusi Inovatif Teknologi Masa Depan</h2>
@@ -50,7 +49,6 @@
       </div>
     </section>
 
-    <!-- Services -->
     <section id="services" class="py-20 px-4 bg-bgDark">
       <div class="max-w-6xl mx-auto text-center">
         <h3 class="text-3xl font-bold text-white mb-12">Divisi & Layanan</h3>
@@ -75,7 +73,6 @@
       </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact" class="py-20 px-4 bg-surfaceDark">
       <div class="max-w-3xl mx-auto text-center">
         <h3 class="text-3xl font-bold text-white">Kontak Kami</h3>
@@ -90,7 +87,6 @@
       </div>
     </section>
 
-    <!-- Developer -->
     <section id="developer" class="py-20 px-4 bg-bgDark">
       <div class="max-w-4xl mx-auto text-center">
         <h3 class="text-3xl font-bold text-white">Developer</h3>
@@ -103,12 +99,10 @@
       </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-black text-gray-400 text-center p-4 text-sm">
       <p>&copy; 2025 MBC Laboratory. All rights reserved.</p>
     </footer>
 
-    <!-- Script -->
     <script>
       const form = document.getElementById('contactForm');
       const status = document.getElementById('formStatus');
@@ -123,7 +117,7 @@
         };
 
         try {
-          const res = await fetch('cyber-security-mbc-production.up.railway.app/contact', {
+          const res = await fetch('https://cyber-security-mbc-production.up.railway.app/contact', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData)
