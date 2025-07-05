@@ -69,7 +69,4 @@ EMAIL_PASS=yourapppassword
 
 ---
 
-## 📌 Catatan
 
-- Pastikan Anda telah mengaktifkan **App Password** di Gmail untuk dapat mengirim email via nodemailer.
-- Formulir telah disesuaikan agar **mobile-friendly**, **dark-mode**, dan menggunakan **TailwindCSS** secara modern.
